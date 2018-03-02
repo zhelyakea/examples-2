@@ -1,0 +1,44 @@
+@import "../variables.scss";
+.boxes {
+  &__button-wrapper {
+    @include button;
+    flex: 0 0 auto;
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 220px;
+    height: 100px;
+    flex-basis: 25%;
+    &_green {
+      @include colorWhite;
+      @include backBlue;
+      @include pressed;
+    }
+    &_selected {
+      @include colorBrown;
+      @include backYellow;
+      @include pressed;
+    }
+    &_red {
+      @include colorWhite;
+      @include backAlphaRed;
+      @include disabled;
+    }
+    &_blue {
+      @include colorWhite;
+      @include backAlphaBlue;
+      @include disabled;
+    }
+  }
+  &__button-text-wrapper {
+    align-items: center;
+  }
+  &__button-text {
+    margin: 0;
+  }
+  &__button-text-box {
+    margin: 0;
+    font-size: 1.3em;
+  }
+}
